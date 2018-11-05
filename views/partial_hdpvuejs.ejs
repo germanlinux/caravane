@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title><%= title %></title>
+
+    <script src="/js/vue.js"></script>
+    <script src="/js/axios.min.js"></script>
+    <!-- Bootstrap Core CSS -->
+    <link href="/css/bootstrap.min.css" rel="stylesheet">
+
+
+
+</head>
+
+<body>
+<div id="app">
+    <h2> {{message}} </h2>
+<div>
+  <label for="sondeur">enqueteur</label><br>
+  <input type="text"  v-model ="sondeur"/><br>
+  <label for="code postal">Code postal</label><br>
+  <input type="text"  v-model ="code"/><br>
+  <hr>
+</div>
+{{nbitem-1}} Formulaire(s)  <button   v-on:click="plustous">Envoyer les formulaires sur le serveur</button>
+
+<!-- question 1  -->
+<br><hr>
+<div>
+<label for="question">Question 1:Êtes-vous inscrit(e) sur les listes électorales ?</label><br>
+<label for="question1-1">OUI</label>
+<input type= "radio" value='O' v-model ="question1"><br>
+<label for="question1-2">NON</label>
+<input type= "radio" value='N' v-model="question1"><br>
+<label for="question1-3">Je ne sais pas</label>
+<input type= "radio" value='I' v-model="question1"><br>
+</div>
+<!-- question 2  -->
+<br><hr>
+<div>
+<label for="question2">Question 2:Quelles sont les dernières élections où vous avez voté ?</label><br>
+<label for="question2-1">Présidentielle</label>
+<input type= checkbox value='P' v-model = "question2X1"><br>
+
+<label for="question2-2">Législatives</label>
+<input type= checkbox value='L'  v-model = "question2X2"><br>
+
+<label for="question2-3">Municipales</label>
+<input type= checkbox value='M'  v-model = "question2X3"><br>
+
+<label for="question2-3">Régionales</label>
+<input type= checkbox value='P'  v-model = "question2X4"><br>
+
+<label for="question2-4">Européennes</label>
+<input type= checkbox value='P'  v-model = "question2X5"><br>
+
+<label for="question2-5">Je n'ai jamais voté</label>
+<input type= checkbox value='X'  v-model = "question2X5"><br>
+
+<label for="question2-6">Je ne vote plus</label>
+<input type= checkbox value='Z'  v-model = "question2X6"><br>
+
+</div>
+<!-- question 3  -->
+<br><hr>
+<div>
+<label for="question3">Question 3:Si ne vote plus ou jamais: pourquoi ?</label><br>
+<textarea size="100"  v-model ="question3"  cols="40" rows="5"></textarea>
+</div>
+<!-- question 4  -->
+<br><hr>
+<div>
+<label for="question4">Question 4:Considérez-vous qu'il y a trop de scrutins en France ?</label><br>
+<label for="question4-1">OUI</label>
+<input type= "radio" value='O' v-model ="question4"><br>
+<label for="question4-2">NON</label>
+<input type= "radio" value='N' v-model="question4"><br>
+<label for="question4-3">Je ne sais pas</label>
+<input type= "radio" value='I' v-model="question4"><br>
+</div>
+<!-- question 5  -->
+<br><hr>
+<div>
+<label for="question5">Question 5:Êtes-vous pour la reconnaissance du vote blanc ?</label><br>
+<label for="question5-1">OUI</label>
+<input type= "radio" value='O' v-model ="question5"><br>
+<label for="question5-2">NON</label>
+<input type= "radio" value='N' v-model="question5"><br>
+<label for="question5-3">Je ne sais pas</label>
+<input type= "radio" value='I' v-model="question5"><br>
+</div>
+<!-- question 6  -->
+<br><hr>
+<div>
+<label for="question6">Question 6:Êtes-vous favorable au vote électronique ?</label><br>
+<label for="question6-1">OUI</label>
+<input type= "radio" value='O' v-model ="question6"><br>
+<label for="question6-2">NON</label>
+<input type= "radio" value='N' v-model="question6"><br>
+<label for="question6-3">Je ne sais pas</label>
+<input type= "radio" value='I' v-model="question6"><br>
+</div>
+<!-- question 7  -->
+<br><hr>
+<div>
+<label for="question7">Question 7:Si oui: pourquoi ?</label><br>
+<textarea size="100"  v-model ="question7"  cols="40" rows="5"></textarea>
+</div>
+
+<!-- question 8  -->
+<br><hr>
+<div>
+<label for="question8">Question 8:Pensez-vous que les politiques comprennent les raisons de l'abstention ?</label><br>
+<label for="question8-1">OUI</label>
+<input type= "radio" value='O' v-model ="question8"><br>
+<label for="question8-2">NON</label>
+<input type= "radio" value='N' v-model="question8"><br>
+<label for="question8-3">Je ne sais pas</label>
+<input type= "radio" value='I' v-model="question8"><br>
+</div>
+
+<!-- question 9  -->
+<br><hr>
+<div>
+<label for="question9">Question 9:Voulez vous indiquer votre adresse mail pour avoir communication des résultats du sondage ?</label><br>
+<input type= "text" size="40" v-model="question9"><br>
+</div>
+
+
+<br><hr>
+<button   v-on:click="plusun">Sauvegarder le formulaire</button>
+</div>
+</body>
+
+  <script src="/javascripts/eg.js"></script>
+
+</html>
