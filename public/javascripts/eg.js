@@ -242,7 +242,7 @@ var eric = new  Vue({
      console.log('TOTAL', result);
      var param = {};
      param['resultat'] = result;
-      axios.post('http://localhost:3000/maj' , param)
+      axios.post('/maj' , param)
     .then(response => {
        console.log (response);
        if (response.data == 'OK') {  // supprimer  les items
