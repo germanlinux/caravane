@@ -4,8 +4,8 @@ var state = {
 };
 exports.connect = function(done) {
   if (state.db) return done();
- //     var mybase = process.env.DATABASE_URL +'?ssl=true';
-      var mybase = "postgres://postgres:pass@127.0.0.1:5432/questions94"
+     var mybase = process.env.DATABASE_URL +'?ssl=true';
+//      var mybase = "postgres://postgres:pass@127.0.0.1:5432/questions94"
       state.db =pgp(mybase);
       done()
 };
