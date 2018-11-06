@@ -21,7 +21,9 @@
 
 <body>
 <div id="app">
+
     <h2> {{message}} </h2>
+<div class="container">
 <div>
   <label for="sondeur">enqueteur</label><br>
   <input type="text"  v-model ="sondeur"/><br>
@@ -29,12 +31,15 @@
   <input type="text"  v-model ="code"/><br>
   <hr>
 </div>
-{{nbitem-1}} Formulaire(s)  <button   v-on:click="plustous">Envoyer les formulaires sur le serveur</button>
+{{nbitem-1}} Formulaire(s)  <button  type="button" class="btn btn-danger"   v-on:click="plustous">Envoyer les formulaires sur le serveur</button>
 
 <!-- question 1  -->
 <br><hr>
-<div>
+
+<div class="card">
+<div class="card-header">
 <label for="question">Question 1:Êtes-vous inscrit(e) sur les listes électorales ?</label><br>
+</div>
 <label for="question1-1">OUI</label>
 <input type= "radio" value='O' v-model ="question1"><br>
 <label for="question1-2">NON</label>
@@ -44,8 +49,10 @@
 </div>
 <!-- question 2  -->
 <br><hr>
-<div>
+<div class="card">
+<div class="card-header">
 <label for="question2">Question 2:Quelles sont les dernières élections où vous avez voté ?</label><br>
+</div>
 <label for="question2-1">Présidentielle</label>
 <input type= checkbox value='P' v-model = "question2X1"><br>
 
@@ -70,14 +77,18 @@
 </div>
 <!-- question 3  -->
 <br><hr>
-<div>
+<div class="card">
+<div class="card-header">
 <label for="question3">Question 3:Si ne vote plus ou jamais: pourquoi ?</label><br>
+</div>
 <textarea size="100"  v-model ="question3"  cols="40" rows="5"></textarea>
 </div>
 <!-- question 4  -->
 <br><hr>
-<div>
+<div class="card">
+<div class="card-header">
 <label for="question4">Question 4:Considérez-vous qu'il y a trop de scrutins en France ?</label><br>
+</div>
 <label for="question4-1">OUI</label>
 <input type= "radio" value='O' v-model ="question4"><br>
 <label for="question4-2">NON</label>
@@ -87,8 +98,10 @@
 </div>
 <!-- question 5  -->
 <br><hr>
-<div>
+<div class="card">
+<div class="card-header">
 <label for="question5">Question 5:Êtes-vous pour la reconnaissance du vote blanc ?</label><br>
+</div>
 <label for="question5-1">OUI</label>
 <input type= "radio" value='O' v-model ="question5"><br>
 <label for="question5-2">NON</label>
@@ -98,8 +111,10 @@
 </div>
 <!-- question 6  -->
 <br><hr>
-<div>
+<div class="card">
+<div class="card-header">
 <label for="question6">Question 6:Êtes-vous favorable au vote électronique ?</label><br>
+</div>
 <label for="question6-1">OUI</label>
 <input type= "radio" value='O' v-model ="question6"><br>
 <label for="question6-2">NON</label>
@@ -109,15 +124,19 @@
 </div>
 <!-- question 7  -->
 <br><hr>
-<div>
+<div class="card">
+<div class="card-header">
 <label for="question7">Question 7:Si oui: pourquoi ?</label><br>
+</div>
 <textarea size="100"  v-model ="question7"  cols="40" rows="5"></textarea>
 </div>
 
 <!-- question 8  -->
 <br><hr>
-<div>
+<div class="card">
+<div class="card-header">
 <label for="question8">Question 8:Pensez-vous que les politiques comprennent les raisons de l'abstention ?</label><br>
+</div>
 <label for="question8-1">OUI</label>
 <input type= "radio" value='O' v-model ="question8"><br>
 <label for="question8-2">NON</label>
@@ -128,14 +147,17 @@
 
 <!-- question 9  -->
 <br><hr>
-<div>
+<div class="card">
+<div class="card-header">
 <label for="question9">Question 9:Voulez vous indiquer votre adresse mail pour avoir communication des résultats du sondage ?</label><br>
-<input type= "text" size="40" v-model="question9"><br>
+</div>
+<input type= "text"  placeholder="votre mail" size="40" v-model="question9"><br>
 </div>
 
 
 <br><hr>
-<button   v-on:click="plusun">Sauvegarder le formulaire</button>
+<button  type="button" class="btn btn-success" v-on:click="plusun">Sauvegarder le formulaire</button>
+</div>
 </div>
 </body>
 
