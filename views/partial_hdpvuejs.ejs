@@ -24,17 +24,18 @@
 
     <h2> {{message}} </h2>
 <div class="container">
-<div>
-  <label for="sondeur">enqueteur</label><br>
+<div class="alert alert-secondary" role="alert">
+  <label for="sondeur">Enqueteur</label><br>
   <input type="text"  v-model ="sondeur"/><br>
   <label for="code postal">Code postal</label><br>
   <input type="text"  v-model ="code"/><br>
   <hr>
-</div>
 {{nbitem-1}} Formulaire(s)  <button  type="button" class="btn btn-danger"   v-on:click="plustous">Envoyer les formulaires sur le serveur</button>
-
-<!-- question 1  -->
+</div>
 <br><hr>
+<!-- question 1  -->
+<div class="alert alert-primary" role="alert"><a name="debut">Début du questionnaire</a></div>
+
 
 <div class="card">
 <div class="card-header">

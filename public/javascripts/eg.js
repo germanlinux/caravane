@@ -229,7 +229,7 @@ var eric = new  Vue({
      this.question7=  '';
      this.question8=  '';
      this.question9=  '';
-
+      window.location.href = "#debut";
 
  //    localStorage.setItem('nbitem',ncle);
     },
